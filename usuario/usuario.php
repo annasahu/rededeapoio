@@ -18,18 +18,6 @@ class Usuario {
 		$prepare->execute();
 		return $prepare->rowCount();
 	}
-	/*public function contar_empresas() : int {
-		$sql = "SELECT tipoUsuario FROM usuarios WHERE tipoUsuario = 'Empresa'";
-		$prepare = $this->conexao->prepare($sql);
-		$prepare->execute();
-		return $prepare->rowCount();
-	}
-	public function contar_profissionais() : int {
-		$sql = "SELECT tipoUsuario FROM usuarios WHERE tipoUsuario LIKE 'Profissional%'";
-		$prepare = $this->conexao->prepare($sql);
-		$prepare->execute();
-		return $prepare->rowCount();
-	}*/
 	public function listar_clientes() : array {
 		$sql = "SELECT * FROM usuarios WHERE tipoUsuario = 'Cliente'";
 		$usuarios = [];			
@@ -38,22 +26,6 @@ class Usuario {
 		}
 		return $usuarios;
 	}
-	/*public function listar_empresas() : array {
-		$sql = "SELECT * FROM usuarios WHERE tipoUsuario = 'Empresa'";
-		$usuarios = [];			
-		foreach($this->conexao->query($sql) as $key => $value) {
-			array_push($usuarios, $value);
-		}
-		return $usuarios;
-	}
-	public function listar_profissionais() : array {
-		$sql = "SELECT * FROM usuarios WHERE tipoUsuario LIKE 'Profissional%'";
-		$usuarios = [];			
-		foreach($this->conexao->query($sql) as $key => $value) {
-			array_push($usuarios, $value);
-		}
-		return $usuarios;
-	}*/
 	public function inserir(string $nomeUsuario, string $documentoUsuario, string $logradouroUsuario, string $cepUsuario, string $cidadeUsuario, string $estadoUsuario, string $telefoneUsuario, string $emailUsuario, string $senhaUsuario, string $tipoUsuario) : int {
 		$sql = "INSERT INTO usuarios(nomeUsuario,documentoUsuario,logradouroUsuario,cepUsuario,cidadeUsuario,estadoUsuario,telefoneUsuario,emailUsuario,senhaUsuario,tipoUsuario) VALUES(:nomeUsuario, :documentoUsuario, :logradouroUsuario, :cepUsuario, :cidadeUsuario, :estadoUsuario, :telefoneUsuario, :emailUsuario, :senhaUsuario, :tipoUsuario)";		
 		$prepare = $this->conexao->prepare($sql);
