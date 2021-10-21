@@ -79,9 +79,10 @@ body, html {
     <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">SOBRE</a>
     <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PRODUTOS</a>
     <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTATO</a>
-    <!-- NECESSIDADE DE ALTERAR!!! -->
-    <a href="#" class="w3-bar-item w3-button">BUSCA</a>
-    <!-- NECESSIDADE DE ALTERAR!!! -->
+    <form action="resultados.php" method="post" class="w3-bar-item">    
+      <input name="searchterm" type="text" placeholder="Buscar por produtos..." />
+      <button type="submit" name="submit" value="Search" /><i class="fa fa-search"></i></button><br>  
+    </form>   
   </div>  
 
 </div>
@@ -89,7 +90,7 @@ body, html {
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
   <div class="w3-display-middle" style="white-space:nowrap;">
-    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">REDE DE APOIO A AMPUTADOS</span>
+    <p class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">REDE DE APOIO<br>A AMPUTADOS</p>
   </div>
 </div>
 
@@ -215,7 +216,7 @@ body, html {
             <input class="w3-input w3-border" type="text" placeholder="E-mail" required name="Email">
           </div>
         </div>
-        <input class="w3-input w3-border" type="text" placeholder="Mensagem" required name="Message">
+        <textarea class="w3-input w3-border" placeholder="Mensagem" required name="Message" rows="10" cols="50"></textarea>
         <button class="w3-button w3-black w3-right w3-section" type="submit">
           <i class="fa fa-paper-plane"></i> ENVIAR
         </button>
