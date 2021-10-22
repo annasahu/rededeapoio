@@ -26,11 +26,11 @@ if(!isset($_SESSION['login_user'])){
 <body>
     <nav>
         <div class="topnav" id="myTopnav">
-            <a class="active"  href="#">Recebimentos</a>
+            <a class="active"  href="#">Recebido</a>
             <a href="atualizar_cliente.php">Dados Cliente</a>
-            <a href="../produto/formulario_produto.php">Cadastra Produtos</a>
-            <a href="site_produtos_cliente.php">Doações</a>
-            <a href="carrinhoPro.php">Carrinho Produtos</a>
+            <a href="../produto/formulario_produto.php">Cadastro Produto</a>
+            <a href="site_produtos_cliente.php">Doado</a>
+            <a href="carrinhoPro.php">Carrinho</a>
             <a href="../sair.php">Sair</a>    
             <a href="javascript:void(0);" class="icon" onclick="menuBarra()">
                 <i class="fa fa-bars"></i>

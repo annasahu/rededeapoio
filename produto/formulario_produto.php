@@ -35,11 +35,11 @@ include ("../conexao.php");
 <body>
     <nav>
         <div class="topnav" id="myTopnav">
-            <a href="../usuario/site_cliente.php">Recebimentos</a>
+            <a href="../usuario/site_cliente.php">Recebido</a>
             <a href="../usuario/atualizar_cliente.php">Dados Cliente</a>
-            <a class="active"  href="#">Cadastra Produtos</a>
-            <a href="../usuario/site_produtos_cliente.php">Doações</a>
-            <a href="../usuario/carrinhoPro.php">Carrinho Produtos</a>
+            <a class="active"  href="#">Cadastro Produto</a>
+            <a href="../usuario/site_produtos_cliente.php">Doado</a>
+            <a href="../usuario/carrinhoPro.php">Carrinho</a>
             <a href="../sair.php">Sair</a>
             <a href="javascript:void(0);" class="icon" onclick="menuBarra()">
                 <i class="fa fa-bars"></i>

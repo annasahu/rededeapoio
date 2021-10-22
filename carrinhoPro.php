@@ -78,7 +78,7 @@ require 'itemPro.php';
 					<th class="thcart"><center>Quantidade</center></th>
 					<th class="thcart"><center>Op&ccedil;&atilde;o</center></th>
 				</tr>
-				<?php header("Content-type: text/html; charset=iso-8859-1");
+				<?php
 				$cartPro = unserialize ( serialize ( $_SESSION ['cartPro'] ) );
 				$index = 0;
 				for($i = 0; $i < count ( $cartPro ); $i ++) {					

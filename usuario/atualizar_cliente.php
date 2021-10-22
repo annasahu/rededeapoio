@@ -35,11 +35,11 @@ if($result = $conexao->query($sql)) {
 <body>
     <nav>
         <div class="topnav" id="myTopnav">
-            <a href="site_cliente.php">Recebimentos</a>
+            <a href="site_cliente.php">Recebido</a>
             <a class="active"  href="#">Dados Cliente</a>
-            <a href="../produto/formulario_produto.php">Cadastra Produtos</a>
-            <a href="site_produtos_cliente.php">Doações</a>            
-            <a href="carrinhoPro.php">Carrinho Produtos</a>
+            <a href="../produto/formulario_produto.php">Cadastro Produto</a>
+            <a href="site_produtos_cliente.php">Doado</a>            
+            <a href="carrinhoPro.php">Carrinho</a>
             <a href="../sair.php">Sair</a>
             <a href="javascript:void(0);" class="icon" onclick="menuBarra()">
                 <i class="fa fa-bars"></i>
