@@ -54,8 +54,9 @@ CREATE TABLE `produtos` (
   `descricaoProduto` text,
   `quantidadeProduto` int DEFAULT NULL,
   `idUsuario` int DEFAULT NULL,
+  `imagemProduto` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`idProduto`)
-) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=28 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +65,7 @@ CREATE TABLE `produtos` (
 
 LOCK TABLES `produtos` WRITE;
 /*!40000 ALTER TABLE `produtos` DISABLE KEYS */;
-INSERT INTO `produtos` VALUES (17,6,'Tênis Grand Court Base','Este tênis da Adidas inspirado nos anos 70 tem cabedal sintético macio. Uma mistura dos vários estilos celebrados nas quadras.',2,2),(19,2,'Bengala em alumínio 4 pontas','A Bengala de Alumínio com 4 pontas da Indaia é prática e durável. Com oito níveis de regulagem de altura através de pino de fácil ajuste. Indicada para auxiliar o equilíbrio na caminhada ou marcha.',3,2),(20,4,'Cadeira de Rodas Simples','A cadeira Prolife é durável e resistente. Fabricada em aço carbono. Os freios bilaterais proporcionam segurança. Para seu conforto o encosto e o assento são em nylon. A cadeira é dobrável. Este modelo possui pneus infláveis e tem capacidade para até 90 kg.',1,3),(21,3,'Cadeira de banho em aluminio com coletor','A cadeira de banho higiênica reforçada com assento estofado e coletor D60 Dellamed é ideal para usuários com dificuldade de locomoção, sendo indicada para o uso sanitário e chuveiro.',1,3);
+INSERT INTO `produtos` VALUES (17,6,'Tênis Grand Court Base','Este tênis da Adidas inspirado nos anos 70 tem cabedal sintético macio. Uma mistura dos vários estilos celebrados nas quadras.',2,2,'Tenis_Grand_Court_Base.jpeg'),(19,2,'Bengala em alumínio 4 pontas','A Bengala de Alumínio com 4 pontas da Indaia é prática e durável. Com oito níveis de regulagem de altura através de pino de fácil ajuste. Indicada para auxiliar o equilíbrio na caminhada ou marcha.',3,2,'Bengala_em_alumínio_4_pontas.jpeg'),(20,4,'Cadeira de Rodas Simples','A cadeira Prolife é durável e resistente. Fabricada em aço carbono. Os freios bilaterais proporcionam segurança. Para seu conforto o encosto e o assento são em nylon. A cadeira é dobrável. Este modelo possui pneus infláveis e tem capacidade para até 90 kg.',1,3,'Cadeira_Rodas_Simples.jpeg'),(21,3,'Cadeira de banho em aluminio com coletor','A cadeira de banho higiênica reforçada com assento estofado e coletor D60 Dellamed é ideal para usuários com dificuldade de locomoção, sendo indicada para o uso sanitário e chuveiro.',1,3,'Cadeira_Banho_Aluminio.jpeg'),(22,4,'Cadeira de Rodas Simples','A cadeira Prolife é durável e resistente. Fabricada em aço carbono com pintura epóxi. Os freios bilaterais proporcionam segurança ao usuário. Para seu conforto o encosto e o assento são em nylon. A cadeira é também dobrável. Este modelo possui pneus infláveis, tem capacidade para té 90 kg.',1,2,'Cadeira_Rodas_Simples.jpeg'),(23,3,'Cadeira de banho simples','Cadeira Dune com estrutura em aço carbono. Fixa. Pintura epóxi, assento sanitário com abertura frontal para facilitar a higiene. Encosto em courvin. Apoio de pés escamoteáveis. apoio de braços fixo.',1,2,'Cadeira_Banho_Simples.png'),(24,6,'Tênis Adidas Ultimashow','Confeccionado em material que proporciona circulação de ar e frescor para os pés durante as atividades. Entressola macia e confortável e solado em borracha para maior tração dos movimentos. Tamanho 41, Masculino, cor Preta.',2,2,'Tenis_Adidas_Ultimashow.jpeg'),(27,1,'Meia para Coto Amputado','Meia Acessória para Coto Amputado Transtibial Ortho Pauher. Ajusta, protege e estabiliza o coto no encaixe da prótese.',5,3,'Meia_Cota.jpeg');
 /*!40000 ALTER TABLE `produtos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,4 +111,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-21 23:14:09
+-- Dump completed on 2021-10-23 18:10:45
