@@ -79,6 +79,7 @@ if (!$conexao) {
                     echo "
                     <div class='row lat'></div>
                     <div class='row cent'>
+                        <div class='column centro'><img src='../imagens_produtos/{$value['imagemProduto']}' alt='Imagem de Produto' width='250' height='250'></div>
                         <div class='column centro'><p><b>{$value['nomeProduto']}</b></p></div>
                         <div class='column justificado'><p>{$value['descricaoProduto']}</p></div>
                         <div class='column centro'><p>{$value['nomeCategoria']}</p></div>

@@ -49,7 +49,7 @@ include ("../conexao.php");
     <section>
         <div class="margin">
         <br><h3>Cadastro de produto:</h3><br>
-            <form method="POST" action="../produto/cadastro_produto.php">
+            <form method="POST" action="../produto/cadastro_produto.php" enctype="multipart/form-data">
             <p hidden><input type="number" name="idUsuario" value="<?php echo $obj->idUsuario; ?>"></p>
                 <label>Categoria:</label><br>
                     <select name="idCategoria">
@@ -71,6 +71,10 @@ include ("../conexao.php");
                 <label>Descrição do Produto:</label><br>
                 <textarea name="descricaoProduto" rows="10" cols="50" required></textarea>        
                 <br><br>
+                <label>Selecione a imagem a ser enviada:</label>
+                <br><br>
+                <input type="file" name="file">
+                <br><br><br>
                 <input type="submit" name="submit" value="Cadastrar">
             </form>
             <?php

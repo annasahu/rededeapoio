@@ -39,16 +39,17 @@ class Produto {
 			array_push($produtos, $value);
 		}
 		return $produtos;
-	}
-	public function inserir(string $nomeProduto, int $idCategoria, string $descricaoProduto, int $quantidadeProduto, int $idUsuario) : int {
-		$sql = "INSERT INTO produtos(nomeProduto,idCategoria,descricaoProduto,quantidadeProduto,idUsuario) VALUES(:nomeProduto, :idCategoria, :descricaoProduto, :quantidadeProduto, :idUsuario)";		
+	}	
+	public function inserir(string $nomeProduto, int $idCategoria, string $descricaoProduto, int $quantidadeProduto, int $idUsuario, string $imagemProduto) : int {
+		$sql = "INSERT INTO produtos(nomeProduto,idCategoria,descricaoProduto,quantidadeProduto,idUsuario,imagemProduto) VALUES(:nomeProduto, :idCategoria, :descricaoProduto, :quantidadeProduto, :idUsuario, :imagemProduto)";		
 		$prepare = $this->conexao->prepare($sql);	
 		$prepare->bindParam(1, $nomeProduto);
 		$prepare->bindParam(2, $idCategoria);
 		$prepare->bindParam(3, $descricaoProduto);
 		$prepare->bindParam(4, $quantidadeProduto);
-		$prepare->bindParam(5, $$idUsuario);
-		$prepare->execute(array(':nomeProduto' => $nomeProduto, ':idCategoria' => $idCategoria, ':descricaoProduto' => $descricaoProduto, ':quantidadeProduto' => $quantidadeProduto, ':idUsuario' => $idUsuario));	
+		$prepare->bindParam(5, $idUsuario);
+		$prepare->bindParam(6, $imagemProduto);
+		$prepare->execute(array(':nomeProduto' => $nomeProduto, ':idCategoria' => $idCategoria, ':descricaoProduto' => $descricaoProduto, ':quantidadeProduto' => $quantidadeProduto, ':idUsuario' => $idUsuario, ':imagemProduto' => $imagemProduto));	
 		return $prepare->rowCount();
 	}	
 	public function atualizar(string $nomeProduto, int $idCategoria, string $descricaoProduto, int $quantidadeProduto, int $idUsuario, int $idProduto) : int {
