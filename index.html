@@ -82,7 +82,7 @@ body, html {
     <form action="resultados.php" method="post" class="w3-bar-item">    
       <input name="searchterm" type="text" placeholder="Buscar por produtos..." />
       <button type="submit" name="submit" value="Search" /><i class="fa fa-search"></i></button><br>  
-    </form>   
+    </form>  
   </div>  
 
 </div>
@@ -206,21 +206,23 @@ body, html {
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Telefone: (19) 3818-1105<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> E-mail: contato@redeapoio.com<br>
       </div>
+
       <p>Para dúvidas ou sugestões:</p>
-      <form action="/action_page.php" target="_blank">
+      <form action="envio.php" name="contactform" method="POST">
         <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="Nome" required name="Name">
+            <input class="w3-input w3-border" type="text" placeholder="Nome" required name="name">
           </div>
           <div class="w3-half">
-            <input class="w3-input w3-border" type="text" placeholder="E-mail" required name="Email">
+            <input class="w3-input w3-border" type="text" placeholder="E-mail" required name="email">
           </div>
-        </div>
-        <textarea class="w3-input w3-border" placeholder="Mensagem" required name="Message" rows="10" cols="50"></textarea>
+        </div>              
+        <textarea class="w3-input w3-border" placeholder="Mensagem" required name="comments" rows="10" cols="50"></textarea>
         <button class="w3-button w3-black w3-right w3-section" type="submit">
           <i class="fa fa-paper-plane"></i> ENVIAR
         </button>
       </form>
+      
     </div>
   </div>
 </div>
