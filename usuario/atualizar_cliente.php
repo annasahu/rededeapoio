@@ -19,7 +19,7 @@ if($result = $conexao->query($sql)) {
 <head>
     <title>Formulario para atualizar Cliente</title>
     <meta charset="utf-8"/>
-    <link rel="stylesheet" type="text/css" href="../css/estilo.css">  
+    <link rel="stylesheet" type="text/css" href="../css/estilo2.css">  
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         function menuBarra() {
@@ -35,18 +35,32 @@ if($result = $conexao->query($sql)) {
 <body>
     <nav>
         <div class="topnav" id="myTopnav">
-            <a href="site_cliente.php">Recebido</a>
-            <a class="active"  href="#">Dados Cliente</a>
-            <a href="../produto/formulario_produto.php">Cadastro Produto</a>
-            <a href="site_produtos_cliente.php">Doado</a>            
-            <a href="carrinhoPro.php">Carrinho</a>
-            <a href="../sair.php">Sair</a>
+            <a class="active" href="#">Dados Cliente</a>            
+            <div class="dropdown">
+                <button class="dropbtn">Produto
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="../produto/formulario_produto.php">Cadastro</a>
+                    <a href="carrinhoPro.php">Carrinho</a>
+                    <a href="site_produtos_cliente.php">Doado</a> 
+                    <a href="site_cliente.php">Recebido</a>
+                    <form action="resultados.php" method="post">    
+                        <input name="searchterm" type="text" style="margin-left: 5px; margin-bottom: 5px; width: 180px; height: 35px;" placeholder="Buscar por produtos..." />
+                        <button type="submit" name="submit" style="position: relative; top: 10px;" value="Search" /><img src="../imagens/lupa.png" style="height: 30px;"></button>  
+                    </form> 
+                </div>
+            </div>  
+            <a href="../sair.php">Sair</a>    
             <a href="javascript:void(0);" class="icon" onclick="menuBarra()">
                 <i class="fa fa-bars"></i>
             </a>
-        </div> 
-    </nav>    
+        </div>
+    </nav> 
     <section>
+        <div class="margin">
+            <?php echo "<h4>Seja bem vindo " . $_SESSION['login_user'] . "!</h4>"; ?>
+        </div>
         <div class="margin">
         <h3>Atualizar cliente:</h3>
             <form method="POST" action="atualizar_cli.php" enctype="multipart/form-data">

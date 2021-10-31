@@ -3,7 +3,14 @@
     <title>Formulário para Cadastro de Usuário</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="../css/w3.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 </head>
+<script type="text/javascript">          
+    $("#cpf").mask("000.000.000-00");
+    $("#cep").mask("00.000-000"); 
+    $("#tel").mask("(00) 0000-0000");    
+</script>
 <body>
     <div class="w3-container w3-black">
 		<h2>Cadastro de usuário:</h2>
@@ -13,7 +20,7 @@
         <input class="w3-input w3-border" style="width:40%" type="text" name="nomeUsuario" required>
         <br>
         <label>CPF:</label><br>
-        <input class="w3-input w3-border" style="width:40%" type="text" name="documentoUsuario" required>
+        <input class="w3-input w3-border form-control" style="width:40%" type="text" name="documentoUsuario" id="cpf" required>
         <br>
         <label>Tipo:</label><br>
         <select class="w3-input w3-border" style="width:25%" name="tipoUsuario">
@@ -23,7 +30,7 @@
         </select>
         <br>
         <label>CEP:</label><br>
-        <input class="w3-input w3-border" style="width:40%" type="text" name="cepUsuario" placeholder="00000-000" required>
+        <input class="w3-input w3-border form-control" style="width:40%" type="text" name="cepUsuario" id="cep" required>
         <br>
         <label>Logradouro:</label><br>
         <input class="w3-input w3-border" style="width:40%" type="text" name="logradouroUsuario" required>
@@ -63,7 +70,7 @@
             </select>
         <br>
         <label>Telefone:</label><br>
-        <input class="w3-input w3-border" style="width:40%" type="text" name="telefoneUsuario" placeholder="(00) 0000-0000" required>
+        <input class="w3-input w3-border form-control" style="width:40%" type="text" name="telefoneUsuario" id="tel" required>
         <br>
         <label>E-mail:</label><br>
         <input class="w3-input w3-border" style="width:40%" type="email" name="emailUsuario" required>
