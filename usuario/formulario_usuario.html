@@ -6,11 +6,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 </head>
-<script type="text/javascript">          
-    $("#cpf").mask("000.000.000-00");
-    $("#cep").mask("00.000-000"); 
-    $("#tel").mask("(00) 0000-0000");    
-</script>
+<script src="../js/mask.js"></script>
 <body>
     <div class="w3-container w3-black">
 		<h2>Cadastro de usuário:</h2>
@@ -19,7 +15,7 @@
         <label>Nome completo:</label><br>
         <input class="w3-input w3-border" style="width:40%" type="text" name="nomeUsuario" required>
         <br>
-        <label>CPF:</label><br>
+        <label>CPF (digite somente números):</label><br>
         <input class="w3-input w3-border form-control" style="width:40%" type="text" name="documentoUsuario" id="cpf" required>
         <br>
         <label>Tipo:</label><br>
@@ -29,47 +25,19 @@
             <option value="Cliente">Cliente</option>
         </select>
         <br>
-        <label>CEP:</label><br>
+        <label>CEP (digite somente números):</label><br>
         <input class="w3-input w3-border form-control" style="width:40%" type="text" name="cepUsuario" id="cep" required>
         <br>
         <label>Logradouro:</label><br>
-        <input class="w3-input w3-border" style="width:40%" type="text" name="logradouroUsuario" required>
+        <input class="w3-input w3-border" style="width:40%" type="text" name="logradouroUsuario" id="endereco" required>
         <br>
         <label>Cidade:</label><br>
-        <input class="w3-input w3-border" style="width:40%" type="text" name="cidadeUsuario" required>
+        <input class="w3-input w3-border" style="width:40%" type="text" name="cidadeUsuario" id="cidade" required>
         <br>     
         <label>Estado:</label><br>
-            <select class="w3-input w3-border" style="width:10%" name="estadoUsuario">
-                <option value="Acre">AC</option>
-                <option value="Alagoas">AL</option>		
-                <option value="Amapa">AP</option>
-                <option value="Amazonas">AM</option>
-                <option value="Bahia">BA</option>
-                <option value="Ceara">CE</option>
-                <option value="Distrito Federal">DF</option>
-                <option value="Espirito do Santo">ES</option>
-                <option value="Goias">GO</option>
-                <option value="Maranhao">MA</option>		
-                <option value="Mato Grosso">MT</option>
-                <option value="Mato Grosso do Sul">MS</option>
-                <option value="Minas Gerais">MG</option>		
-                <option value="Para">PA</option>
-                <option value="Paraiba">PB</option>
-                <option value="Parana">PR</option>
-                <option value="Pernambuco">PE</option>
-                <option value="Piaui">PI</option>		
-                <option value="Rio Grande do Norte">RN</option>
-                <option value="Rio Grande do Sul">RS</option>
-                <option value="Rio de Janeiro">RJ</option>
-                <option value="Rondonia">RO</option>
-                <option value="Roraima">RR</option>
-                <option value="Santa Catarina">SC</option>
-                <option value="Sao Paulo">SP</option>
-                <option value="Sergipe">SE</option>
-                <option value="Tocantins">TO</option>
-            </select>
-        <br>
-        <label>Telefone:</label><br>
+        <input class="w3-input w3-border" style="width:40%" type="text" name="estadoUsuario" id="uf" required>
+        <br>     
+        <label>Telefone (digite somente números):</label><br>
         <input class="w3-input w3-border form-control" style="width:40%" type="text" name="telefoneUsuario" id="tel" required>
         <br>
         <label>E-mail:</label><br>
@@ -81,5 +49,7 @@
         <input class="w3-btn w3-black w3-round" type="submit" name="submit" value="Cadastrar">
         <button class="w3-btn w3-black w3-round" style="margin-left:25px;" onclick="window.location.href='../index.html'">Voltar</button></a>
     </form>
+    <script src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="../js/auto.preenchimento.cep.js"></script>
 </body>
 </html>
