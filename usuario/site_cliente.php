@@ -51,6 +51,8 @@ if(!isset($_SESSION['login_user'])){
         <div class="margin">
             <?php echo "<h4>Seja bem vindo " . $_SESSION['login_user'] . "!</h4>"; ?>
         </div>
+        <br>
+        <p><img src="../imagens/construcao.jpg"></p>
     </section>  
 </body>
 </html>

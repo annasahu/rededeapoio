@@ -65,7 +65,7 @@ include ("../conexao.php");
             <form method="POST" action="../produto/cadastro_produto.php" enctype="multipart/form-data">
             <p hidden><input type="number" name="idUsuario" value="<?php echo $obj->idUsuario; ?>"></p>
                 <label>Categoria:</label><br>
-                    <select name="idCategoria">
+                    <select name="idCategoria" required>
                         <option value="#">Selecione</option>   
                         <option value="1">Acessórios</option> 
                         <option value="2">Bengalas</option>
@@ -78,8 +78,8 @@ include ("../conexao.php");
                 <label>Nome do Produto:</label><br>
                 <input type="text" name="nomeProduto" required>
                 <br><br>
-                <label>Quantidade do Produto:</label><br>
-                <input type="number" name="quantidadeProduto" required>
+                <label>Quantidade do Produto (de um 1 a 100):</label><br>
+                <input type="number" name="quantidadeProduto" min="1" max="100" required>
                 <br><br>
                 <label>Descrição do Produto:</label><br>
                 <textarea name="descricaoProduto" rows="10" cols="50" required></textarea>        

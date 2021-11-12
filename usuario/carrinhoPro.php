@@ -111,9 +111,14 @@ require '../itemPro.php';
 				<a href="site_cliente.php"><button type="button">Voltar</button></a><br><br>
 			</div>
 			<div class="col-cart">
-				<a href="#"><button type="button">Finalizar</button></a>
+				<a href="#"><button onclick="msnAlerta()" type="button">Finalizar</button></a>
 			</div>
 		</div>
 	</div>
+	<script>
+		function msnAlerta() {
+			alert("Falta finalizar... Desculpe!");
+		}
+	</script>
 </body>
 </html>

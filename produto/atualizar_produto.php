@@ -24,8 +24,8 @@ if($result = $conexao->query($sql)) {
         <label>Nome do Produto:</label><br>
         <input type="text" name="nomeProduto" value="<?php echo $obj->nomeProduto; ?>">
         <br><br>
-        <label>Quantidade do Produto:</label><br>
-        <input type="number" name="quantidadeProduto" value="<?php echo $obj->quantidadeProduto; ?>">
+        <label>Quantidade do Produto (de um 1 a 100):</label><br>
+        <input type="number" name="quantidadeProduto" min="1" max="100" value="<?php echo $obj->quantidadeProduto; ?>">
         <br><br>
         <label>Descricao do Produto:</label><br>
         <textarea name="descricaoProduto" rows="10" cols="50"><?php echo $obj->descricaoProduto; ?></textarea> 
